@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCXZd_-1ZGwLtOYLnWsI7govPzBzH-K_-o",
+      authDomain: "node-todolist-demo.firebaseapp.com",
+      databaseURL: "https://node-todolist-demo.firebaseio.com",
+      projectId: "node-todolist-demo",
+      storageBucket: "node-todolist-demo.appspot.com",
+      messagingSenderId: "373758006509"
+    };
+    firebase.initializeApp(config);
+    let database = firebase.database();
+    console.log(database);
+    // ref() 尋找database路徑
+    // ste() 新增資料
+    // firebase.database().ref().set('hello world!');
+
+    // firebase全部為物件格式，無法陣列內容
+    // let data = null;
+    // 假想班級情境
+    // data = {
+    //   student1: {
+    //     name: 'pitt1',
+    //     number: '1'
+    //   },
+    //   student1: {
+    //     name: 'pitt2',
+    //     number: '2'
+    //   }
+    // }
+    // firebase.database().ref().set({
+    //   student1: {
+    //     name: 'pitt1',
+    //     number: '1'
+    //   },
+    //   student2: {
+    //     name: 'pitt2',
+    //     number: '2'
+    //   }
+    // });
+    // firebase.database().ref('student1/name').set('bob');
+
+    // 假想餐廳情境
+    data = {
+      food: {
+        coke: {
+          num: 20,
+          price: 30
+        },
+        fries: {
+          num: 30,
+          price: 500
+        }
+      },
+      order: {
+        1: {
+          coke: 10
+        },
+        2: {
+          fries: 5,
+          coke: 10
+        }
+      }
+    }
+    firebase.database().ref().set({
+      food: {
+        coke: {
+          num: 20,
+          price: 30
+        },
+        fries: {
+          num: 30,
+          price: 500
+        }
+      },
+      order: {
+        1: {
+          coke: 10
+        },
+        2: {
+          fries: 5,
+          coke: 10
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input id="todoTxt" type="text" placeholder="請輸入待辦事項">
+  <input id="sendBtn" type="button">
+  <ul id="todoList">
+
+  </ul>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCXZd_-1ZGwLtOYLnWsI7govPzBzH-K_-o",
+      authDomain: "node-todolist-demo.firebaseapp.com",
+      databaseURL: "https://node-todolist-demo.firebaseio.com",
+      projectId: "node-todolist-demo",
+      storageBucket: "node-todolist-demo.appspot.com",
+      messagingSenderId: "373758006509"
+    };
+    firebase.initializeApp(config);
+  </script>
+</body>
+</html>

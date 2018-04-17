@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="title"></h1>
+  <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCXZd_-1ZGwLtOYLnWsI7govPzBzH-K_-o",
+      authDomain: "node-todolist-demo.firebaseapp.com",
+      databaseURL: "https://node-todolist-demo.firebaseio.com",
+      projectId: "node-todolist-demo",
+      storageBucket: "node-todolist-demo.appspot.com",
+      messagingSenderId: "373758006509"
+    };
+    firebase.initializeApp(config);
+    // 將資料寫入資料庫
+    // firebase.database().ref('myName').set('pitt');
+    // 找出資料所在的路徑位置
+    // const myName = firebase.database().ref('myName');
+    // // once 讀取一次資料庫的資料，on 隨時監聽
+    // myName.once('value',function(snapshot){
+    //   // console.log(snapshot.val());
+    //   // A寫法將資料庫取出的值渲染到頁面上
+    //   // let wuZhe = snapshot.val();
+    //   // document.getElementById('title').textContent = wuZhe;
+    //   // B寫法將資料庫取出的值渲染到頁面上
+    //   document.getElementById('title').textContent = snapshot.val();
+    // })
+    
+    // 假想情境，寫入社群朋友資料
+    // firebase.database().ref('myFriends').set({
+    //   friend1: 'tom',
+    //   friend2: 'bob'
+    // });
+    // let friendsRef = firebase.database().ref('myFriends');
+    // friendsRef.once('value',function(snapshot){
+    //   console.log(snapshot.val());
+    // })
+
+    // on語法運用
+    // let nameRef = firebase.database().ref('myName');  // 建立路徑
+    // nameRef.set('pitt');
+    // // 渲染頁面，並透過on語法進行隨時監聽
+    // nameRef.on('value',function(snapshot){
+    //   document.getElementById('title').textContent = snapshot.val();
+    // })
+
+    // 異步觀念
+    // let nameRef = firebase.database().ref('myName');  // 建立路徑
+    // nameRef.set('pitt01');  // 若是存值進入，則快照當下即取得資料，console時即可呈現，但若是撈取database則需要回傳時間，會先異步執行下一個函數
+    // nameRef.once('value',function(snapshot){
+    //   console.log(snapshot.val());
+    //   document.getElementById('title').textContent = snapshot.val();
+    // })
+    // console.log('test');
+
+    // push語法運用
+    // let toDos = firebase.database().ref('toDos');
+    // toDos.push({
+    //   content: 'push語法測試第一筆',
+    //   content: 'push語法測試第二筆'
+    // });
+
+    // 子路徑 child
+    // let toDos = firebase.database().ref('toDos'); // 一般寫法用來查找路徑
+    // let toDos = firebase.database().ref().child('toDos'); // 子路徑寫法，雖然寫法不同，但結果等同於上方的一般寫法
+    // toDos.child('-LACO7JHpJvrwwHKq8R8').remove();
+
+    // for in運用(類似v-for)
+    let colors = ['red','black','yellow'];
+    // 陣列中變數會依序撈出索引
+    for(let node in colors){
+      console.log(node);
+    }
+    // 資料為物件性質時，變數會顯示屬性
+    let toDos = {
+      number1: {
+        content: '測試第一筆'
+      },
+      number2: {
+        content: '測試第二筆'
+      }
+    }
+    for(let node1 in toDos){
+      console.log(toDos[node1].content);
+    }
+  </script>
+</body>
+</html>
