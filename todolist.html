@@ -7,8 +7,8 @@
   <title>Document</title>
 </head>
 <body>
-  <input id="todoTxt" type="text" placeholder="請輸入待辦事項">
-  <input id="sendBtn" type="button">
+  <input id="todoText" type="text" placeholder="請輸入待辦事項">
+  <input id="sendBtn" type="button" value="送出">
   <ul id="todoList">
 
   </ul>
@@ -24,6 +24,38 @@
       messagingSenderId: "373758006509"
     };
     firebase.initializeApp(config);
+    // 替執行動作賦值
+    let todoText = document.getElementById('todoText');
+    let sendBtn = document.getElementById('sendBtn');
+    let todoList = document.getElementById('todoList');
+    // 寫入todoList資料庫路徑
+    const toDos = firebase.database().ref('toDos');
+
+    // 執行送出按鈕時，將資料寫入database
+    // 監聽click事件
+    sendBtn.addEventListener('click',function(e){
+      console.log(todoText.value);
+      toDos.push({content: todoText.value});
+    })
+    // 在頁面渲染資料
+    // 利用firebase的.on語法隨時監聽，再透過snapshot將每次資料更新時進行快照
+    toDos.on('value', function(snapshot){
+      let str = '';
+      let data = snapshot.val();
+      for(let node in data){
+        str+= '<li data-key="' + node + '">' + data[node].content + '</li>';
+      }
+      // 渲染到頁面上的ul
+      todoList.innerHTML = str;
+    })
+    // 執行刪除動作的邏輯
+    todoList.addEventListener('click',function(e){
+      console.log(e.target.nodeName);
+      if(e.target.nodeName="LI"){
+        let key = e.target.dataset.key;
+        toDos.child(key).remove();
+      }
+    })
   </script>
 </body>
 </html>
