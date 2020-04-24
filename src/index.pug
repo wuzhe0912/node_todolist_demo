@@ -3,14 +3,34 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Dosis")
     link(rel="stylesheet", href="./scss/style.scss")
     title Chihting Lo
   body
-    //- Header
+    //- Nav
+    nav.navbar.navbar-dark.fixed-top
+      a.navbar-brand.mx-auto(href="#")
+        img(src="./images/nuno.png" alt="logo")
+    .video-background
+      .video-wrap
+        .video-content
+          video.bg-video(autoplay loop muted playsinline)
+            source(src="./images/stars.mp4" type="video/mp4")
+    //- Video txt
+    .caption.text-center
+      h1 I Am Chihting Lo
+      h3 Oversea Sales & Project Manager
+      a.btn.btn-outline-light.btn-lg(href="#course") View My Profile
+
+    #course.row.justify-content-center
+      .col-md-8.text-center
+        h1 Nuno Theme Course
+        p.lead Creating an Advanced Responsive Website Template with HTML, CSS &amp; Bootstrap 4!
+        a.btn.btn-secondary.btn-sm NUNO THEME COURSE
 
     //- Main content
+    section
 
     //- Footer
+    footer
 
     script(src="./modules/main.js")

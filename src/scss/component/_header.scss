@@ -1,0 +1,49 @@
+@import "../share";
+
+// === Nav style ===
+.navbar {
+  background: rgba(0, 0, 0, .6);
+}
+
+.navbar-brand  img {
+  height: to-rem(32px);
+}
+
+// === Video txt ===
+.caption {
+  @include position(absolute, 20%, n, n, n);
+  width: 100%;
+  color: $light;
+
+  h1 {
+    @include breakpoint($mobile, true) {
+      font-size: to-rem(48px);
+      margin-bottom: to-rem(8px);
+    }
+
+    font-size: $font-big;
+    font-weight: 700;
+    letter-spacing: to-rem(4px);
+    text-shadow: to-rem(2px) to-rem(2px) to-rem(12px) $dark;
+    margin-bottom: to-rem(16px);
+  }
+
+  h3 {
+    @include breakpoint($mobile, true) {
+      font-size: to-rem(32px);
+      margin-bottom: to-rem(24px);
+    }
+
+    font-size: to-rem(18px);
+    text-shadow: to-rem(2px) to-rem(2px) to-rem(8px) $dark;
+    margin-bottom: to-rem(20px);
+  }
+
+  .btn-lg {
+    @include breakpoint($mobile, true) {
+      font-size: $font-large;
+    }
+
+    font-size: $font-normal;
+  }
+}
