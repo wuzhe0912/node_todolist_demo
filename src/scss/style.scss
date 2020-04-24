@@ -1,4 +1,7 @@
-@import "color";
+@import "share";
+@import "./header";
+@import "./home";
+@import "./about";
 
 html {
   font-size: 100%;
@@ -11,7 +14,7 @@ body {
   width: 100%;
   height: 100%;
   font-size: 100%;
-  font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Helvetica", "Arial", "Microsoft YaHei", "Microsoft JhengHei", "Heiti", "Microsoft YaHei Bold", sans-serif;
+  font-family: 'Dosis', -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Helvetica", "Arial", "Microsoft YaHei", "Microsoft JhengHei", "Heiti", "Microsoft YaHei Bold", sans-serif;
   font-weight: normal;
   line-height: 1;
 }
@@ -23,6 +26,7 @@ body {
 
 a {
   text-decoration: none;
+  color: $primary-dark;
 }
 
 p,
@@ -35,12 +39,19 @@ ul {
   padding: 0;
 }
 
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
 ul {
   list-style: none;
 }
 
 img {
   max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -59,4 +70,39 @@ input {
   padding: 0;
   border: 0;
   border-radius: 0;
+}
+
+// section
+.section__container {
+  h2 {
+    font-size: $font-huge;
+  }
+}
+
+.lead {
+  margin-top: to-rem(16px);
+  font-size: $font-large;
+}
+
+.specials {
+  margin-top: to-rem(48px);
+  display: grid;
+  grid-gap: to-rem(16px);
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+
+  p {
+    margin-top: to-rem(16px);
+  }
+}
+
+// footer
+.main__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $primary-dark;
+  color: $light;
+  height: to-rem(70px);
+  font-size: $font-big;
 }

@@ -3,8 +3,62 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Chihting Lo
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Dosis")
+    link(rel="stylesheet", href="./scss/style.scss")
+    title Chihting Lo | Oversea Sales
   body
+    //- Header
+    header.header__wrap
+      .container
+        nav.main__nav
+          .nav__logo
+          ul.nav__list
+            li
+              a.nav__text.current(href="index.pug") Home
+            li
+              a.nav__text(href="about.pug") About
+            li
+              a.nav__text(href="work.pug") Work
+            li
+              a.nav__text(href="contact.pug") Contact
+        .header__content
+          h1 I Am Chihting Lo The 
+            span.txt__type(
+              data-wait="3000"
+              data-words='["Oversea Sales", "Mechanical Engineer", "Project Manager"]'
+            )
+          a.btn__light(href="about.pug") View My Profile
 
+    //- section：Process
+    section
+      .section__container
+        h2.section__title I Specialize In
+        .bottom__line
+        p.lead Revenue growing, inventory reducing, cash flow increasing, manpower & cost saving
+        .specials
+          div
+            .process__icon
+              i.fas.fa-file-alt.fa-2x
+              .process__step
+                span 1
+            p.process__txt Worked with McKinsey RTS team to set up PMO and management rules and system of transformation project.
+          div
+            .process__icon
+              i.fas.fa-desktop.fa-2x
+              .process__step
+                span 2
+            p.process__txt Followed up the schedule of new product releasing, equipment importing, testing and the progress of developing distributor, contract signing, pricing negotiation.
+          div
+            .process__icon
+              i.fas.fa-object-ungroup.fa-2x
+              .process__step
+                span 3
+            p.process__txt Implemented new AR/AP period, new inventory management tools.
 
-  script(src="./script.js")
+    //- Footer
+    footer.main__footer
+      .footer__content
+        p 2020 &copy; By Pitt Wu
+  
+    script(src="./modules/typeWrite.js")
+    script(src="./modules/main.js")

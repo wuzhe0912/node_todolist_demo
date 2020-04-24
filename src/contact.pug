@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Dosis")
+    link(rel="stylesheet", href="./scss/style.scss")
+    title Chihting Lo
+  body
+    //- Header
+    header.header__inner
+      .container
+        nav.main__nav
+          .nav__logo
+          ul.nav__list
+            li
+              a.nav__text(href="index.pug") Home
+            li
+              a.nav__text(href="about.pug") About
+            li
+              a.nav__text(href="work.pug") Work
+            li
+              a.nav__text.current(href="contact.pug") Contact
+
+    //- section：Process
+    section
+      .section__container
+        h2.section__title CONTACT ME
+        .bottom__line
+        p.lead Here is how you can reach me
+        .specials

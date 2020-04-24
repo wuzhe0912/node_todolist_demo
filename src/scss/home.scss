@@ -1,0 +1,63 @@
+@import "share";
+
+.header__wrap {
+  background: url("../images/home.jpg") no-repeat center right/cover;
+  height: 100vh;
+  color: $light;
+}
+
+.header__content {
+  text-align: center;
+  padding-top: 20%;
+
+  h1 {
+    font-size: $font-mega;
+    line-height: 1.2;
+    margin-bottom: to-rem(32px);
+  }
+}
+
+.process__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: $primary-dark;
+  color: $light;
+  width: to-rem(130px);
+  height: to-rem(130px);
+  margin: 0 auto;
+  position: relative;
+  transition: all 1s;
+  font-size: $font-large;
+  cursor: pointer;
+
+  &:hover {
+    width: to-rem(160px);
+    height: to-rem(160px);
+    padding: to-rem(26px);
+    background: $primary;
+
+    .process__step {
+      width: to-rem(50px);
+      height: to-rem(50px);
+      background: $primary-dark;
+    }
+  }
+}
+
+.process__step {
+  @include position(absolute, 0, 0, n, n);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-large;
+  background: $primary;
+  color: $light;
+  border-radius: 50%;
+  width: to-rem(40px);
+  height: to-rem(40px);
+  transition: all 1s;
+}
+
