@@ -1,7 +1,8 @@
 @import "share";
-@import "./header";
-@import "./home";
-@import "./about";
+@import "./page/home";
+@import "./page/header";
+@import "./page/about";
+@import "./page/contact";
 
 html {
   font-size: 100%;
