@@ -2,9 +2,11 @@
 @import "mixin";
 
 // media width
+$pc: 1200px;
 $padPro: 1024px;
-$pad: 768px;
+$pad: 769px;
 $mobile: 480px;
+$iPhone-mini: 359px;
 
 // font
 $font-normal: to-rem(16px);

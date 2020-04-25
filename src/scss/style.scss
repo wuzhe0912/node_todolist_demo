@@ -2,6 +2,9 @@
 @import "share";
 @import "./component/video";
 @import "./component/header";
+@import "./component/about";
+@import "./component/experience";
+@import "./component/skill";
 
 html {
   font-size: 100%;
@@ -72,29 +75,126 @@ input {
   border-radius: 0;
 }
 
-/*============= COURSE SECTION =============*/
+// === share section ===
+section {
+  width: 100%;
+  padding: to-rem(70px);
+}
 
-.col-md-8 {
-  margin: 2rem auto 8rem;
-  padding-top: 2rem;
-}
-.col-md-8 h1 {
-    font-size: 2.4rem;
+// === arrow ===
+.arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: to-rem(26px);
+    height: to-rem(26px);
+    border-bottom: 3px solid $primary;
+    border-right: 3px solid $primary;
+    animation: animate 2s infinite;
+
+    &:nth-child(2) {
+      animation-delay: -.2s;
+    }
+    &:nth-child(3) {
+      animation-delay: -.4s;
+    }
   }
-.btn-secondary {
-  border-width: medium;
-  border-radius: 0;
-  padding: .6rem 1.2rem;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  margin: 1rem;
-  border-color: #1EBBA3;
-  background-color: #1EBBA3;
-  color: white;
 }
-.btn-secondary:hover,
-.btn-secondary:focus {
-  border-color: #189582;
-  background-color: #189582;
-  color: white;
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+// === contact ===
+.contact-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: to-rem(24px);
+  background: $primary-dark;
+  color: $light;
+
+  span {
+    @include breakpoint($iPhone-mini, true) {
+      font-size: $font-normal;
+    }
+    @include breakpoint($pad, true) {
+      font-size: $font-big;
+    }
+
+    font-size: $font-small;
+  }
+}
+
+.contact-title {
+  @include breakpoint($iPhone-mini, true) {
+    font-size: $font-large;
+  }
+  @include breakpoint($pad, true) {
+    font-size: to-rem(60px);
+  }
+
+  font-size: $font-big;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: to-rem(24px);
+}
+
+.content-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    margin-top: to-rem(8px);
+  }
+}
+
+.message-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: to-rem(24px);
+  background: $primary;
+  color: $light;
+  
+  h1 {
+    @include breakpoint($iPhone-mini, true) {
+      font-size: $font-large;
+    }
+    @include breakpoint($pad, true) {
+      font-size: to-rem(60px);
+    }
+
+    font-size: $font-big;
+  }
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: to-rem(24px);
+  background: $primary-dark;
+  color: $light;
+  font-size: $font-big;
 }

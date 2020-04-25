@@ -11,13 +11,13 @@
 
 // === Video txt ===
 .caption {
-  @include position(absolute, 20%, n, n, n);
+  @include position(absolute, 5%, n, n, n);
   width: 100%;
   color: $light;
 
   h1 {
     @include breakpoint($mobile, true) {
-      font-size: to-rem(48px);
+      font-size: $font-huge;
       margin-bottom: to-rem(8px);
     }
 

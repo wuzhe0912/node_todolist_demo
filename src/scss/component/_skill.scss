@@ -1,0 +1,43 @@
+@import "../share";
+
+.skill-container {
+  padding: to-rem(32px);
+
+  h2 {
+    @include breakpoint($mobile, true) {
+      font-size: $font-huge;
+    }
+
+    text-align: center;
+    color: $primary;
+    font-size: $font-large;
+  }
+}
+
+.bottom-line {
+  width: to-rem(80px);
+  height: to-rem(2px);
+  background: $primary-dark;
+  margin: 0 auto;
+}
+
+.progress-wrap {
+  padding: 0 to-rem(16px);
+  margin-bottom: to-rem(12px);
+
+  h4 {
+    margin-top: to-rem(16px);
+  }
+}
+
+.progress {
+  overflow: hidden;
+  height: to-rem(20px);
+  background: $primary-medium;
+  border-radius: to-rem(6px);
+
+  div {
+    height: 100%;
+    background: $primary;
+  }
+}
