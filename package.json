@@ -1,0 +1,13 @@
+{
+  "name": "gridsome-pitt-site",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "dev": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0",
+    "tailwindcss": "^1.8.10"
+  }
+}
