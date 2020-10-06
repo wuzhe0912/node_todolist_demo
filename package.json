@@ -7,7 +7,14 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@gridsome/source-contentful": "^0.6.0",
     "gridsome": "^0.7.0",
+    "markdown-it": "^11.0.1",
     "tailwindcss": "^1.8.10"
+  },
+  "devDependencies": {
+    "gridsome-plugin-pug": "^0.0.3",
+    "gridsome-plugin-tailwindcss": "^3.0.1",
+    "pug": "^3.0.0"
   }
 }

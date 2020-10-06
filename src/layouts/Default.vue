@@ -1,16 +1,17 @@
-<template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
-    <slot/>
-  </div>
+<template lang="pug">
+  .layout
+    header.p-4.shadow-lg(class="md:flex md:items-center md:justify-around md:pb-4")
+      g-link(to="/") Pitt Wu's Blog
+      nav.flex.flex-wrap.items-center.justify-around.text-primary.font-bold
+        ul.list-reset(class="md:flex md:items-center")
+          li(v-for="node in list" :key="node.name" class="md:ml-4")
+            g-link.nav__link.block.no_underline.py-2(class="hover:text-darkgray md:boder-none md:p-0" :to="node.link") {{ node.name }}
+    //- content
+    slot
+    //- Footer
+    footer.mt-20.font-light.text-gray.w-full.text-center.p-4
+      p.text-base.block.text-primary.font-bold Copyright &copy; 2020 Pitt Wu
+      p.text-xs.block Developed using Gridsome, Tailwind CSS, Contentful
 </template>
 
 <static-query>
@@ -21,30 +22,14 @@ query {
 }
 </static-query>
 
-<style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
+<script>
+export default {
+  data() {
+    return {
+      list: [
+        { name: 'About', link: '/about/' },
+      ],
+    }
+  }
 }
-
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
-}
-</style>
+</script>
