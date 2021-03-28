@@ -1,17 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-import HumbergeMenu from 'components/HumbergeMenu';
+import HumbergeMenu from 'components/NavBar/HumbergeMenu';
+import Logo from 'assets/logo.png';
+import { MEDIA_QUERY_MD } from 'constant/BreakPoint';
 
 const Nav = styled.nav`
   display: grid;
   grid-template-columns: 150px auto 450px;
   align-items: center;
   width: 100%;
-  height: 65px;
-  border-bottom: 2px solid #f1f1f1;
+  height: 85px;
 
-  .nav-logo {
-    padding: 0 20px;
+  img {
+    margin-left: 30px;
+    width: 60px;
+    height: 60px;
+
+    ${MEDIA_QUERY_MD} {
+      width: 40px;
+      height: 40px;
+    }
   }
 `;
 
@@ -19,7 +27,7 @@ const NavBar = () => {
   return (
     <header>
       <Nav>
-        <div className='nav-logo'>Logo App</div>
+        <img src={Logo} alt='logo' />
         <div></div>
         <HumbergeMenu></HumbergeMenu>
       </Nav>

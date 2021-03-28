@@ -1,6 +1,6 @@
 import { useState, Fragment } from 'react';
 import styled from 'styled-components';
-import NavList from 'components/NavList';
+import NavList from 'components/NavBar/NavList';
 import { MEDIA_QUERY_MD } from 'constant/BreakPoint';
 
 const BurgerMenu = styled.aside`
@@ -13,7 +13,7 @@ const BurgerMenu = styled.aside`
     width: 3rem;
     height: 2rem;
     position: fixed;
-    top: 15px;
+    top: 25px;
     right: 15px;
     cursor: pointer;
     z-index: 2;

@@ -1,5 +1,5 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Navbar from 'components/NavBar';
+import Navbar from 'components/NavBar/NavBar';
 import Photos from 'views/Photos';
 import Movie from 'views/Movie';
 import Todos from 'views/Todos';

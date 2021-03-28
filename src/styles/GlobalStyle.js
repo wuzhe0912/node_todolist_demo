@@ -11,6 +11,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  body {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    min-height: 100vh;
+  }
+
   a {
     text-decoration: none;
   }
