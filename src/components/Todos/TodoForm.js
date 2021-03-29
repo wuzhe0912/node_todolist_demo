@@ -38,6 +38,15 @@ const TodoForm = ({
     setInputText('');
   };
 
+  const getLocalData = () => {
+    if (localStorage.getItem('todos') === null) {
+      localStorage.setItem('todos', JSON.stringify([]));
+    } else {
+      let todosData = JSON.parse(localStorage.getItem('todos'));
+      setTodos(todosData);
+    }
+  };
+
   // first enter
   useEffect(() => {
     getLocalData();
@@ -67,15 +76,6 @@ const TodoForm = ({
 
   const saveLocalData = () => {
     localStorage.setItem('todos', JSON.stringify(todos));
-  };
-
-  const getLocalData = () => {
-    if (localStorage.getItem('todos') === null) {
-      localStorage.setItem('todos', JSON.stringify([]));
-    } else {
-      let todosData = JSON.parse(localStorage.getItem('todos'));
-      setTodos(todosData);
-    }
   };
 
   return (
