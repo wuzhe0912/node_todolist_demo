@@ -1,6 +1,6 @@
 # Photos & Movie App(React)
 
-- [Demo Site Link]()
+<!-- - [Demo Link]() -->
 
 ## Use
 
@@ -12,16 +12,22 @@
 
 ### Todos App
 
-- Add、Delete、Completed Status、Tag Filter
-- Save Use localStorage
+- Features：
+  - `add`
+  - `delete`
+  - `status display`
+  - `tag(filter)`
+  - `save(use localStorage)`
 
 ## Todo
 
-## Photos
+### Photos
 
-- Photos API
-- Infinite scrolling
+- Features：
+  - `Unsplash API`
+  - `search`
+  - `infinite scrolling`
 
-## Movie
+### Movie
 
 - Movie API

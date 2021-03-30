@@ -21,7 +21,7 @@ const AsideList = styled.aside`
   text-align: center;
 
   .link-text {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .link-text:visited {
@@ -29,7 +29,7 @@ const AsideList = styled.aside`
   }
 
   .link-text:hover {
-    color: #333;
+    color: #ff6f47;
   }
 
   .link-icon {
