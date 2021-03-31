@@ -16,7 +16,7 @@ const BurgerMenu = styled.aside`
     top: 25px;
     right: 15px;
     cursor: pointer;
-    z-index: 2;
+    z-index: 3;
 
     div {
       width: 2rem;

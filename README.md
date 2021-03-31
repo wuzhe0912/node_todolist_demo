@@ -8,26 +8,23 @@
 - `#styled-components`、`Font Awesome`
 - `#Basic Responsive(flex + Grid)`
 
-## Done
-
-### Todos App
+## Todos App
 
 - Features：
-  - `add`
-  - `delete`
-  - `status display`
-  - `tag(filter)`
-  - `save(use localStorage)`
+  - `add` - `Done`
+  - `delete` - `Done`
+  - `status display` - `Done`
+  - `tag(filter)` - `Done`
+  - `save(use localStorage)` - `Done`
 
-## Todo
-
-### Photos
+## Photos
 
 - Features：
-  - `Unsplash API`
-  - `search`
-  - `infinite scrolling`
+  - `Unsplash API` - `Done`
+  - `search` - `Done`
+  - `infinite scrolling` - `Done`
 
-### Movie
+## Video
 
-- Movie API
+- Features：
+  - `YouTube API` - `To do`

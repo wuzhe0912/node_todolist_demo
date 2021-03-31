@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Form, FormInput, FormBtn, FormTags } from 'styles/FormStyle';
+import { Form, FormInput, FormBtn, FormTags } from './TodoFormStyle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faTags } from '@fortawesome/free-solid-svg-icons';
 

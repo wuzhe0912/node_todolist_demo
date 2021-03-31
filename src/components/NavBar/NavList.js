@@ -11,7 +11,7 @@ import {
 
 const list = [
   { name: 'Photos', path: '/', icon: faImages },
-  { name: 'Movie', path: '/movie', icon: faFilm },
+  { name: 'Video', path: '/video', icon: faFilm },
   { name: 'Todos', path: '/todos', icon: faCheckCircle },
 ];
 
@@ -52,6 +52,7 @@ const AsideList = styled.aside`
     font-size: 28px;
     text-align: left;
     padding: 10px 30px;
+    z-index: 2;
   }
 `;
 
