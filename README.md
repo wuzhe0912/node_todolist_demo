@@ -1,4 +1,4 @@
-# Photos & Video & Todos App(React)
+# Photos & Todos App(React)
 
 - [Demo Link](https://react-todos-demo.netlify.app/)
 
