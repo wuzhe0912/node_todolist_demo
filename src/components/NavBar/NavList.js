@@ -11,7 +11,7 @@ import {
 
 const list = [
   { name: 'Photos', path: '/', icon: faImages },
-  { name: 'Video', path: '/video', icon: faFilm },
+  // { name: 'Video', path: '/video', icon: faFilm },
   { name: 'Todos', path: '/todos', icon: faCheckCircle },
 ];
 

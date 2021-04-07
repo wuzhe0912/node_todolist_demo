@@ -1,6 +1,6 @@
 # Photos & Video & Todos App(React)
 
-<!-- - [Demo Link]() -->
+- [Demo Link](https://react-todos-demo.netlify.app/)
 
 ## Use
 
@@ -8,23 +8,18 @@
 - `#styled-components`、`Font Awesome`
 - `#Basic Responsive(flex + Grid)`
 
+## Photos
+
+- Feature：
+  - `Unsplash API` - `Done`
+  - `search` - `Done`
+  - `Infinite scrolling` - `Done`
+
 ## Todos App
 
-- Features：
+- Feature：
   - `add` - `Done`
   - `delete` - `Done`
   - `status display` - `Done`
   - `tag(filter)` - `Done`
   - `save(use localStorage)` - `Done`
-
-## Photos
-
-- Features：
-  - `Unsplash API` - `Done`
-  - `search` - `Done`
-  - `infinite scrolling` - `Done`
-
-## Video
-
-- Features：
-  - `YouTube API` - `To do`
