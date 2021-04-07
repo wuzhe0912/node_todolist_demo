@@ -36,7 +36,6 @@ const Photos = () => {
     try {
       const response = (await fetch(url)).json();
       response.then((resolve) => {
-        console.log(page);
         setPhotos((oldPhotos) => {
           if (query && page === 1) {
             return resolve.results;
